@@ -7,7 +7,8 @@ import {
   ROUND_TIME_SECONDS,
 } from '../data/constants';
 import Timer from './Timer';
-import ProgressBar from '../../../sobes-trainer-day-2-ready/src/components/ProgressBar';
+import ProgressBar from './ProgressBar';
+
 
 const QuizScreen = () => {
   const { roundQuestions, finishQuiz } = useQuiz();
