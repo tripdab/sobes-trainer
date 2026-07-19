@@ -48,8 +48,17 @@ export function QuizProvider({ children }) {
       ROUND_QUESTIONS_COUNT,
     );
 
+    // Перемешиваем варианты ответов
+    const randomOrderedAnswers = countQuestions.map((question) => {
+      return {
+        ...question,
+        options: shuffle(question.options),
+      };
+    });
+
     // Установить как вопросы текущего раунда
-    setRoundQuestions(countQuestions);
+    setRoundQuestions(randomOrderedAnswers);
+    // setRoundQuestions(countQuestions);
 
     // Записываем выбранную категорию в состояние
     setSelectedCategory(activeCategory);

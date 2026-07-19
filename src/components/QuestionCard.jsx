@@ -17,11 +17,9 @@ const QuestionCard = ({
           Вопрос {questionNumber}
         </span>
       </div>
-
       <h3 className='text-2xl font-bold leading-[1.2]'>
         {question.question}
       </h3>
-
       {/* Опции ответов */}
       <div className='mt-8 grid gap-3'>
         {question.options.map((option, index) => (
@@ -35,7 +33,6 @@ const QuestionCard = ({
           />
         ))}
       </div>
-
       {/*  Объяснение */}
       {hasSelectedAnswer && (
         <div className='mt-6 rounded-lg border border-line bg-soft p-5 dark:border-zinc-800 dark:bg-zinc-900'>
